@@ -47,7 +47,7 @@ BUOC 6: TAO FILE tasks.json (de tu dong build)
 1. Mo VSCode -> mo thu muc chua file .cpp
 2. Tao thu muc ".vscode" trong project (neu chua co)
 3. Tao file "tasks.json" trong thu muc .vscode voi noi dung:
-
+```
 {
   "version": "2.0.0",
   "tasks": [
@@ -68,12 +68,12 @@ BUOC 6: TAO FILE tasks.json (de tu dong build)
     }
   ]
 }
-
+```
 
 BUOC 7: TAO FILE launch.json (de tu dong chay/debug)
 ------------------------------------------------------
 Tao file "launch.json" trong thu muc .vscode voi noi dung:
-
+```
 {
   "version": "0.2.0",
   "configurations": [
@@ -99,7 +99,7 @@ Tao file "launch.json" trong thu muc .vscode voi noi dung:
     }
   ]
 }
-
+```
 
 BUOC 8: CHAY CHUONG TRINH LAN DAU
 -----------------------------------
