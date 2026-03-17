@@ -1,52 +1,52 @@
-content = """HUONG DAN CAI DAT VA CHAY C++ TREN VSCODE
+content = """ HƯỚNG DẪN CÀI ĐẶT VÀ CHẠY C++ TRÊN VSCODE
 ==========================================
 
-BUOC 1: CAI VSCODE
+Bước 1: Cài đặt Vscode
 ------------------
-- Vao https://code.visualstudio.com
-- Tai ban Windows
-- Cai dat binh thuong (Next -> Next -> Finish)
+- Vào https://code.visualstudio.com
+- Tải bản  Windows
+- cài đặt bình thường (Next -> Next -> Finish)
 
 
-BUOC 2: CAI EXTENSION C++
+Bước 2: Cài Extension C++
 --------------------------
-1. Mo VSCode
-2. Nhan Ctrl + Shift + X (mo Extensions)
-3. Tim "C/C++" -> chon cai cua Microsoft -> nhan Install
+1. Mở Vscode
+2. Nhấn Ctrl + Shift + X (mở  Extensions)
+3. Tìm "C/C++" -> chọn cái của Microsoft -> nhấn Install
 
 
-BUOC 3: CAI MINGW (compiler g++)
+Bước 3: Cài MINGW (compiler g++)
 ---------------------------------
-1. Vao https://www.msys2.org
-2. Tai file .exe -> cai dat mac dinh
-3. Sau khi cai xong, mo cua so MSYS2 UCRT64 (tim trong Start Menu)
-4. Chay lenh sau trong MSYS2:
+1. Vào https://www.msys2.org
+2. Tải file .exe -> cài đặt mặc định
+3. Sau khi cài xong, mở cửa sổ MSYS2 UCRT64 (timf trong Start Menu)
+4. Chạy lệnh sau trong MSYS2:
    pacman -S --mingw-w64-ucrt-x86_64-gcc
-5. Nhan Y de xac nhan cai dat
+5. Nhấn y để xác nhận cài đặt
 
 
-BUOC 4: THEM G++ VAO ENVIRONMENT VARIABLES
+Bước 4: Thêm G++ vào ENVIRONMENT VARIABLES
 -------------------------------------------
-1. Nhan phim Windows -> tim "Edit the system environment variables" -> mo ra
-2. Nhan nut "Environment Variables..."
-3. O phan "System variables" -> tim dong "Path" -> nhan "Edit"
-4. Nhan "New" -> them vao: C:\msys64\ucrt64\bin
-5. Nhan OK -> OK -> OK de luu
+1. Nhấn phím Windows -> tìm "Edit the system environment variables" -> mở ra
+2. Nhấn nút "Environment Variables..."
+3. Ở phần  "System variables" -> tìm dòng  "Path" -> nhấn "Edit"
+4. Nhấn "New" -> thêm vào: C:\msys64\ucrt64\bin
+5. Nhấn OK -> OK -> OK để lưu
 
 
-BUOC 5: KIEM TRA CAI DAT THANH CONG
+Bước 5: Kiểm tra cài đặt thành công
 -------------------------------------
-1. Mo Command Prompt (nhan Windows + R -> go "cmd" -> Enter)
-2. Go lenh: g++ --version
-3. Neu hien ra so phien ban (vi du: g++ 15.2.0) -> cai thanh cong!
-   Neu bao "not recognized" -> kiem tra lai Buoc 4
+1. Mở Command Prompt (nhan Windows + R -> gõ "cmd" -> Enter)
+2. Gõ lệnh: g++ --version
+3. Nếu hiện ra số phiên bản (VD: g++ 15.2.0) -> Cài thành công!
+  Nếu báo "not recognized" ->Kiểm tra lại bước 4
 
 
-BUOC 6: TAO FILE tasks.json (de tu dong build)
+BUOC 6: Tạo File tasks.json (để tự động bulid)
 -----------------------------------------------
-1. Mo VSCode -> mo thu muc chua file .cpp
-2. Tao thu muc ".vscode" trong project (neu chua co)
-3. Tao file "tasks.json" trong thu muc .vscode voi noi dung:
+1. Mở VSCode -> mở thư mục chứa file .cpp
+2. tạo thư mục ".vscode" trong project (nếu chưa có)
+3. Tạo file "tasks.json" trong thư mục .vscode với nội dung:
 ```
 {
   "version": "2.0.0",
@@ -70,9 +70,9 @@ BUOC 6: TAO FILE tasks.json (de tu dong build)
 }
 ```
 
-BUOC 7: TAO FILE launch.json (de tu dong chay/debug)
+Bước 7: Tạo file launch.json (để tự động chạy/debug)
 ------------------------------------------------------
-Tao file "launch.json" trong thu muc .vscode voi noi dung:
+Tạo file "launch.json" trong thư mục .vscode với nội dung:
 ```
 {
   "version": "0.2.0",
@@ -101,12 +101,12 @@ Tao file "launch.json" trong thu muc .vscode voi noi dung:
 }
 ```
 
-BUOC 8: CHAY CHUONG TRINH LAN DAU
+Bước 8: Chạy chương trình lần đầu
 -----------------------------------
-1. Mo file .cpp can chay trong VSCode
-2. Nhan F5
-3. VSCode se tu dong:
-   - Compile file .cpp -> tao ra file .exe cung ten
-   - Mo cua so console den va chay chuong trinh
-4. Neu thanh cong -> cua so console hien ket qua chuong trinh
-5. Neu that bai -> terminal hien thong bao loi mau do
+1. Mở file .cpp cần chạy trong VSCode
+2. Nhấn F5
+3. VSCode sẽ tự động:
+   - Compile file .cpp -> tao ra file .exe cùng tên
+   - Mở cửa sổ console đến và chạy chương trinh
+4. Nếu thành công -> cửa sổ console hiển thị kết quả chương trình
+5. Nếu thất bại -> terminal hiện thông báo màu đỏ
